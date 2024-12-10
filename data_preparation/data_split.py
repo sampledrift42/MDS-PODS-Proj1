@@ -185,9 +185,9 @@ for name, filtered_log in filtered_logs.items():
     print(len(filtered_log))
     overall_rows += len(filtered_log)
     print("startactivities")
-    pm4py.get_start_activities(filtered_log)
+    print(pm4py.get_start_activities(filtered_log))
     print("endactivities")
-    pm4py.get_end_activities(filtered_log)
+    print(pm4py.get_end_activities(filtered_log))
     # filtered_log = pm4py.filtering.filter_start_activities(filtered_log, [])
     filtered_log = pm4py.filtering.filter_end_activities(
         filtered_log, [allowed_end_act[name]]
