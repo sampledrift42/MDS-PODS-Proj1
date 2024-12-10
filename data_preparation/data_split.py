@@ -192,7 +192,8 @@ for name, filtered_log in filtered_logs.items():
     filtered_log = pm4py.filtering.filter_end_activities(
         filtered_log, [allowed_end_act[name]]
     )
-    pm4py.write_xes(filtered_log, f"{name}.xes")
+    filtered_log.to_csv(f"{name}.csv", index=False)
+    # pm4py.write_xes(filtered_log, f"{name}.xes")
 
 
 print(overall_rows)
